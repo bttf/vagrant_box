@@ -21,6 +21,7 @@ exec {'dotfiles':
 
 exec {'deathstar_plans':
   cwd       => '/home/vagrant',
+  user      => 'vagrant',
   creates   => '/home/vagrant/deathstar-plans',
   command   => 'git clone https://github.com/bttf/deathstar_plans',
   logoutput => 'on_failure',
